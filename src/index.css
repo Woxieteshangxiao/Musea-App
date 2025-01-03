@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+  animation-play-state: paused;
+}
+
+:is(.playing) .animate-spin-slow {
+  animation-play-state: running;
+}
